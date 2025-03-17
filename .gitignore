@@ -1,18 +1,56 @@
-*/config/development
-*/logs/log-*.php
-!*/logs/index.html
-*/cache/*
-!system/cache/*
-!*/cache/index.html
-!*/cache/.htaccess
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
 
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
+# Environment files
+.env
+.env.*
+!.env.example
 
-#codeigniter 3
+# Composer
+/vendor/
+composer.lock
+
+# CodeIgniter
+application/cache/*
+!application/cache/index.html
 application/logs/*
 !application/logs/index.html
-!application/logs/.htaccess
-/vendor/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Testing
+/phpunit.xml
+.phpunit.result.cache
+/tests/coverage/
+
+# Application specific
+/application/config/development/
+/application/config/testing/
+/application/config/production/
+
+# Node modules (if using any frontend build tools)
+/node_modules/
+/npm-debug.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Build files
+/build/
+/dist/
+
+# Documentation
+/docs/build/
+
+# Backup files
+*.bak
+*.backup
+*~
